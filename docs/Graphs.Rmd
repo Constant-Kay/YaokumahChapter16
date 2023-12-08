@@ -1,0 +1,44 @@
+---
+title: "Flagstaff_Weather_Graph"
+author: "CONSTANT YAOKUMAH"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r, include=FALSE,warning=FALSE,message=FALSE,error=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+ This Rmarkdown file will do the analysis.
+    
+```{r}
+library(YaokumahChapter16)   # load YaokumahChapter16, which includes SNOW,TMAX,TMIN,PRCP data frame.
+library(ggplot2)
+    
+ggplot(Flagstaff_Weather, aes(x=DATE, y=PRCP)) +
+geom_line() + labs(title = 'Dates and PRCP', x = 'Years')
+```
+    
+    
+```{r}
+library(YaokumahChapter16)# load YaokumahChapter16, which includes SNOW,TMAX,TMIN,PRCP data frame.
+library(ggplot2)
+    
+ggplot(Flagstaff_Weather, aes(x=DATE, y=SNOW)) +
+geom_point() + labs(title = 'Dates and SNOW', x = 'Years')
+```   
+    
+
+    
+```{r}
+library(YaokumahChapter16)   # load YaokumahChapter16, which includes SNOW,TMAX,TMIN,PRCP data frame.
+library(ggplot2)
+    
+ggplot(Flagstaff_Weather, aes(x=DATE, y=TMAX)) +
+geom_line() + labs(title = 'Dates and TMAX', x = 'Years')
+```    
+
+    
+    We see that the daily changes in temperature in Flagstaff varies quite a lot.
+    
+    
